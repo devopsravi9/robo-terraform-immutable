@@ -116,7 +116,7 @@ module "catalogue" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
-  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  //PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
@@ -139,7 +139,7 @@ module "user" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
-  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  //PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
@@ -163,7 +163,7 @@ module "payment" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
-  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  //PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
@@ -185,7 +185,7 @@ module "shipping" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
-  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  //PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
