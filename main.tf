@@ -101,124 +101,124 @@ module "cart" {
   PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
   //REDDIS_ENDPOINT         = module.elasticache.REDDIS_ENDPOINT
 }
-//
-//module "catalogue" {
-//  source                  = "github.com/devopsravi9/module-mutable-app"
-//  COMPONENT               = "catalogue"
-//  ENV                     = var.ENV
-//  ASG_DESIRED             = var.INSTANCE_COUNT["CATALOGUE"]["ASG_DESIRED"]
-//  ASG_MAX                 = var.INSTANCE_COUNT["CATALOGUE"]["ASG_MAX"]
-//  ASG_MIN                 = var.INSTANCE_COUNT["CATALOGUE"]["ASG_MIN"]
-//  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["CATALOGUE"]["INSTANCE_TYPE"]
-//  APP_PORT                = 8080
-//  WORKSTATION_IP          = var.WORKSTATION_IP
-//  PROMETHEUS_IP           = var.PROMETHEUS_IP
-//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-//  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
-//  VPC_ID                  = module.vpc.VPC_ID
-//  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-//  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
-//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-//  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
-//  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-//  DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
-//  APP_VERSION             = "2.0.1"
-//}
-//
-//module "user" {
-//  source                  = "github.com/devopsravi9/module-mutable-app"
-//  COMPONENT               = "user"
-//  ENV                     = var.ENV
-//  ASG_DESIRED             = var.INSTANCE_COUNT["USER"]["ASG_DESIRED"]
-//  ASG_MAX                 = var.INSTANCE_COUNT["USER"]["ASG_MAX"]
-//  ASG_MIN                 = var.INSTANCE_COUNT["USER"]["ASG_MIN"]
-//  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["USER"]["INSTANCE_TYPE"]
-//  APP_PORT                = 8080
-//  WORKSTATION_IP          = var.WORKSTATION_IP
-//  PROMETHEUS_IP           = var.PROMETHEUS_IP
-//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-//  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
-//  VPC_ID                  = module.vpc.VPC_ID
-//  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-//  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
-//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-//  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
-//  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-//  DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
-//  REDDIS_ENDPOINT         = module.elasticache.REDDIS_ENDPOINT
-//  APP_VERSION             = "2.0.1"
-//}
-//
-//module "payment" {
-//  source                  = "github.com/devopsravi9/module-mutable-app"
-//  COMPONENT               = "payment"
-//  ENV                     = var.ENV
-//  ASG_DESIRED             = var.INSTANCE_COUNT["PAYMENT"]["ASG_DESIRED"]
-//  ASG_MAX                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MAX"]
-//  ASG_MIN                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MIN"]
-//  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["PAYMENT"]["INSTANCE_TYPE"]
-//  APP_PORT                = 8080
-//  WORKSTATION_IP          = var.WORKSTATION_IP
-//  PROMETHEUS_IP           = var.PROMETHEUS_IP
-//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-//  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
-//  VPC_ID                  = module.vpc.VPC_ID
-//  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-//  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
-//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-//  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
-//  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-//  APP_VERSION             = "2.0.0"
-//}
-//
-//module "shipping" {
-//  source                  = "github.com/devopsravi9/module-mutable-app"
-//  COMPONENT               = "shipping"
-//  ENV                     = var.ENV
-//  ASG_DESIRED             = var.INSTANCE_COUNT["SHIPPING"]["ASG_DESIRED"]
-//  ASG_MAX                 = var.INSTANCE_COUNT["SHIPPING"]["ASG_MAX"]
-//  ASG_MIN                 = var.INSTANCE_COUNT["SHIPPING"]["ASG_MIN"]
-//  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["SHIPPING"]["INSTANCE_TYPE"]
-//  APP_PORT                = 8080
-//  WORKSTATION_IP          = var.WORKSTATION_IP
-//  PROMETHEUS_IP           = var.PROMETHEUS_IP
-//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-//  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
-//  VPC_ID                  = module.vpc.VPC_ID
-//  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-//  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
-//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-//  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
-//  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-//  MYSQL_ENDPOINT          = module.rds.MYSQL_ENDPOINT
-//  APP_VERSION             = "2.0.0"
-//}
-//
-//module "frontend" {
-//  depends_on = [module.cart, module.catalogue, module.user, module.shipping, module.payment]
-//  source                  = "github.com/devopsravi9/module-mutable-app"
-//  COMPONENT               = "frontend"
-//  ENV                     = var.ENV
-//  ASG_DESIRED             = var.INSTANCE_COUNT["FRONTEND"]["ASG_DESIRED"]
-//  ASG_MAX                 = var.INSTANCE_COUNT["FRONTEND"]["ASG_MAX"]
-//  ASG_MIN                 = var.INSTANCE_COUNT["FRONTEND"]["ASG_MIN"]
-//  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["FRONTEND"]["INSTANCE_TYPE"]
-//  APP_PORT                = 80
-//  WORKSTATION_IP          = var.WORKSTATION_IP
-//  PROMETHEUS_IP           = var.PROMETHEUS_IP
-//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-//  ALLOW_SG_CIDR           = concat(module.vpc.PRIVATE_SUBNET_CIDR, module.vpc.PUBLIC_SUBNET_CIDR)
-//  VPC_ID                  = module.vpc.VPC_ID
-//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-//  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
-//  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-//  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
-//  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-//  APP_VERSION             = "2.0.0"
-//}
-//
-//
-//
+
+module "catalogue" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "catalogue"
+  ENV                     = var.ENV
+  ASG_DESIRED             = var.INSTANCE_COUNT["CATALOGUE"]["ASG_DESIRED"]
+  ASG_MAX                 = var.INSTANCE_COUNT["CATALOGUE"]["ASG_MAX"]
+  ASG_MIN                 = var.INSTANCE_COUNT["CATALOGUE"]["ASG_MIN"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["CATALOGUE"]["INSTANCE_TYPE"]
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PROMETHEUS_IP           = var.PROMETHEUS_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
+  //DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
+  APP_VERSION             = "2.0.1"
+}
+
+module "user" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "user"
+  ENV                     = var.ENV
+  ASG_DESIRED             = var.INSTANCE_COUNT["USER"]["ASG_DESIRED"]
+  ASG_MAX                 = var.INSTANCE_COUNT["USER"]["ASG_MAX"]
+  ASG_MIN                 = var.INSTANCE_COUNT["USER"]["ASG_MIN"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["USER"]["INSTANCE_TYPE"]
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PROMETHEUS_IP           = var.PROMETHEUS_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
+  //DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
+  //REDDIS_ENDPOINT         = module.elasticache.REDDIS_ENDPOINT
+  APP_VERSION             = "2.0.1"
+}
+
+module "payment" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "payment"
+  ENV                     = var.ENV
+  ASG_DESIRED             = var.INSTANCE_COUNT["PAYMENT"]["ASG_DESIRED"]
+  ASG_MAX                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MAX"]
+  ASG_MIN                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MIN"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["PAYMENT"]["INSTANCE_TYPE"]
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PROMETHEUS_IP           = var.PROMETHEUS_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
+  APP_VERSION             = "2.0.0"
+}
+
+module "shipping" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "shipping"
+  ENV                     = var.ENV
+  ASG_DESIRED             = var.INSTANCE_COUNT["SHIPPING"]["ASG_DESIRED"]
+  ASG_MAX                 = var.INSTANCE_COUNT["SHIPPING"]["ASG_MAX"]
+  ASG_MIN                 = var.INSTANCE_COUNT["SHIPPING"]["ASG_MIN"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["SHIPPING"]["INSTANCE_TYPE"]
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PROMETHEUS_IP           = var.PROMETHEUS_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
+  //MYSQL_ENDPOINT          = module.rds.MYSQL_ENDPOINT
+  APP_VERSION             = "2.0.0"
+}
+
+module "frontend" {
+  depends_on = [module.cart, module.catalogue, module.user, module.shipping, module.payment]
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "frontend"
+  ENV                     = var.ENV
+  ASG_DESIRED             = var.INSTANCE_COUNT["FRONTEND"]["ASG_DESIRED"]
+  ASG_MAX                 = var.INSTANCE_COUNT["FRONTEND"]["ASG_MAX"]
+  ASG_MIN                 = var.INSTANCE_COUNT["FRONTEND"]["ASG_MIN"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["FRONTEND"]["INSTANCE_TYPE"]
+  APP_PORT                = 80
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PROMETHEUS_IP           = var.PROMETHEUS_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR           = concat(module.vpc.PRIVATE_SUBNET_CIDR, module.vpc.PUBLIC_SUBNET_CIDR)
+  VPC_ID                  = module.vpc.VPC_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
+  APP_VERSION             = "2.0.0"
+}
+
+
+
 
 
 
