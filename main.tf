@@ -103,7 +103,7 @@ module "cart" {
 }
 
 module "catalogue" {
-  source                  = "github.com/devopsravi9/module-mutable-app"
+  source                  = "github.com/devopsravi9/module-immutable-app"
   COMPONENT               = "catalogue"
   ENV                     = var.ENV
   ASG_DESIRED             = var.INSTANCE_COUNT["CATALOGUE"]["ASG_DESIRED"]
@@ -126,7 +126,7 @@ module "catalogue" {
 }
 
 module "user" {
-  source                  = "github.com/devopsravi9/module-mutable-app"
+  source                  = "github.com/devopsravi9/module-immutable-app"
   COMPONENT               = "user"
   ENV                     = var.ENV
   ASG_DESIRED             = var.INSTANCE_COUNT["USER"]["ASG_DESIRED"]
@@ -150,7 +150,7 @@ module "user" {
 }
 
 module "payment" {
-  source                  = "github.com/devopsravi9/module-mutable-app"
+  source                  = "github.com/devopsravi9/module-immutable-app"
   COMPONENT               = "payment"
   ENV                     = var.ENV
   ASG_DESIRED             = var.INSTANCE_COUNT["PAYMENT"]["ASG_DESIRED"]
@@ -172,7 +172,7 @@ module "payment" {
 }
 
 module "shipping" {
-  source                  = "github.com/devopsravi9/module-mutable-app"
+  source                  = "github.com/devopsravi9/module-immutable-app"
   COMPONENT               = "shipping"
   ENV                     = var.ENV
   ASG_DESIRED             = var.INSTANCE_COUNT["SHIPPING"]["ASG_DESIRED"]
@@ -196,7 +196,7 @@ module "shipping" {
 
 module "frontend" {
   depends_on = [module.cart, module.catalogue, module.user, module.shipping, module.payment]
-  source                  = "github.com/devopsravi9/module-mutable-app"
+  source                  = "github.com/devopsravi9/module-immutable-app"
   COMPONENT               = "frontend"
   ENV                     = var.ENV
   ASG_DESIRED             = var.INSTANCE_COUNT["FRONTEND"]["ASG_DESIRED"]
