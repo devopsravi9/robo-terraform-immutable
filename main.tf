@@ -99,7 +99,7 @@ module "cart" {
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
   APP_VERSION             = "2.0.0"
   PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-  //REDDIS_ENDPOINT         = module.elasticache.REDDIS_ENDPOINT
+  REDDIS_ENDPOINT         = module.elasticache.REDDIS_ENDPOINT
 }
 
 module "catalogue" {
@@ -121,7 +121,7 @@ module "catalogue" {
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
   PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-  //DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
+  DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
   APP_VERSION             = "2.0.1"
 }
 
@@ -144,8 +144,8 @@ module "user" {
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
   PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-  //DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
-  //REDDIS_ENDPOINT         = module.elasticache.REDDIS_ENDPOINT
+  DOCDB_ENDPOINT          = module.docdb.DOCDB_ENDPOINT
+  REDDIS_ENDPOINT         = module.elasticache.REDDIS_ENDPOINT
   APP_VERSION             = "2.0.1"
 }
 
@@ -190,7 +190,7 @@ module "shipping" {
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
   PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-  //MYSQL_ENDPOINT          = module.rds.MYSQL_ENDPOINT
+  MYSQL_ENDPOINT          = module.rds.MYSQL_ENDPOINT
   APP_VERSION             = "2.0.0"
 }
 
