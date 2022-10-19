@@ -211,7 +211,7 @@ module "frontend" {
   VPC_ID                  = module.vpc.VPC_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
-  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  //PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
   PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
   APP_VERSION             = "2.0.0"
