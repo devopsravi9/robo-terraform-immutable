@@ -44,27 +44,39 @@ RABBITMQ_INSTANCE_CLASS   = "t3.micro"
 
 INSTANCE_COUNT = {
   FRONTEND = {
-    COUNT = 1
+    ASG_DESIRED   = 2
+    ASG_MAX       = 5
+    ASG_MIN       = 2
     INSTANCE_TYPE = "t3.micro"
   }
   USER = {
-    COUNT = 1
+    ASG_DESIRED   = 2
+    ASG_MAX       = 5
+    ASG_MIN       = 2
     INSTANCE_TYPE = "t3.micro"
   }
   CART = {
-    COUNT = 1
+    ASG_DESIRED   = 2
+    ASG_MAX       = 5
+    ASG_MIN       = 2
     INSTANCE_TYPE = "t3.micro"
   }
   CATALOGUE = {
-    COUNT = 1
+    ASG_DESIRED   = 2
+    ASG_MAX       = 5
+    ASG_MIN       = 2
     INSTANCE_TYPE = "t3.micro"
   }
   SHIPPING = {
-    COUNT = 1
+    ASG_DESIRED   = 2
+    ASG_MAX       = 5
+    ASG_MIN       = 2
     INSTANCE_TYPE = "t3.micro"
   }
   PAYMENT = {
-    COUNT = 1
+    ASG_DESIRED   = 2
+    ASG_MAX       = 5
+    ASG_MIN       = 2
     INSTANCE_TYPE = "t3.micro"
   }
 }
