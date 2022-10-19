@@ -195,7 +195,7 @@ module "shipping" {
 }
 
 module "frontend" {
-  depends_on = [module.cart, module.catalogue, module.user, module.shipping, module.payment]
+  depends_on = [module.cart, module.catalogue, module.user, module.shipping]
   source                  = "github.com/devopsravi9/module-immutable-app"
   COMPONENT               = "frontend"
   ENV                     = var.ENV
