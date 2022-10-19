@@ -149,27 +149,27 @@ module "user" {
   APP_VERSION             = "2.0.1"
 }
 
-//module "payment" {
-//  source                  = "github.com/devopsravi9/module-immutable-app"
-//  COMPONENT               = "payment"
-//  ENV                     = var.ENV
-//  ASG_DESIRED             = var.INSTANCE_COUNT["PAYMENT"]["ASG_DESIRED"]
-//  ASG_MAX                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MAX"]
-//  ASG_MIN                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MIN"]
-//  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["PAYMENT"]["INSTANCE_TYPE"]
-//  APP_PORT                = 8080
-//  WORKSTATION_IP          = var.WORKSTATION_IP
-//  PROMETHEUS_IP           = var.PROMETHEUS_IP
-//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-//  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
-//  VPC_ID                  = module.vpc.VPC_ID
-//  //PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-//  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
-//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-//  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
-//  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
-//  APP_VERSION             = "2.0.0"
-//}
+module "payment" {
+  source                  = "github.com/devopsravi9/module-immutable-app"
+  COMPONENT               = "payment"
+  ENV                     = var.ENV
+  ASG_DESIRED             = var.INSTANCE_COUNT["PAYMENT"]["ASG_DESIRED"]
+  ASG_MAX                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MAX"]
+  ASG_MIN                 = var.INSTANCE_COUNT["PAYMENT"]["ASG_MIN"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["PAYMENT"]["INSTANCE_TYPE"]
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PROMETHEUS_IP           = var.PROMETHEUS_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+  //PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
+  APP_VERSION             = "2.0.0"
+}
 
 module "shipping" {
   source                  = "github.com/devopsravi9/module-immutable-app"
